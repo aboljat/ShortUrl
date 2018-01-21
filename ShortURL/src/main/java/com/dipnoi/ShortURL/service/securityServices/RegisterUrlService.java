@@ -11,10 +11,15 @@ import org.springframework.stereotype.Service;
 
 import com.dipnoi.ShortURL.model.AppUser;
 import com.dipnoi.ShortURL.model.RegisteredUrl;
-import com.dipnoi.ShortURL.model.Statistics;
 import com.dipnoi.ShortURL.repository.AppUserRepository;
 import com.dipnoi.ShortURL.repository.RegisterUrlRepository;
 
+/**
+ * Service used to register new url
+ * 
+ * @author dipnoi
+ *
+ */
 @Service
 public class RegisterUrlService {
 	
@@ -95,7 +100,7 @@ public class RegisterUrlService {
 		List<Object[]> list = regUrlRep.getStats(username);
 		HashMap<String, BigInteger> map = new HashMap<>();
 		
-		
+		//nesto
 		for(Object[] stat : list){
 			
 			map.put((String)stat[0], (BigInteger)stat[1]);

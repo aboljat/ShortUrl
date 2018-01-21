@@ -6,7 +6,12 @@ import org.springframework.stereotype.Service;
 import com.dipnoi.ShortURL.model.RegisteredUrl;
 import com.dipnoi.ShortURL.repository.RegisterUrlRepository;
 
-
+/**
+ * Service used to redirect url
+ * 
+ * @author dipnoi
+ *
+ */
 @Service
 public class RedirectService {
 	
@@ -20,6 +25,13 @@ public class RedirectService {
 
 	}
 	
+	/**
+	 * Method gets initial url using provided shortUrl
+	 * and increments count
+	 * 
+	 * @param shortUrl
+	 * @return
+	 */
 	public RegisteredUrl getInitialUrl(String shortUrl){
 		
 		if(regUrlRep.existsByShortUrl(shortUrl)){

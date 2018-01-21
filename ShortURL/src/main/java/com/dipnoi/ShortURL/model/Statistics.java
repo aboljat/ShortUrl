@@ -13,6 +13,13 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * Model for statistics, also linked to register_url,
+ * so we can retrieve results from custom querry
+ * 
+ * @author dipnoi
+ *
+ */
 @Component
 @Entity
 @Table(name = "registered_url")

@@ -20,7 +20,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-
+/**
+ * Model for appUser
+ * 
+ * @author dipnoi
+ */
 @Component
 @Entity
 @Table(name = "app_user")
@@ -65,7 +69,7 @@ public class AppUser implements UserDetails{
 	@Override
 	@JsonIgnore
 	public boolean isAccountNonLocked() {
-		// we never lock accounts
+		// accounts are never locked
 		return true;
 	}
 

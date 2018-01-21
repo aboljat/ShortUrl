@@ -11,7 +11,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-	    web.ignoring().antMatchers("/ShortURL/account");
+	    web.ignoring().antMatchers("/ShortURL/account").antMatchers("/ShortURL/help");
 	}
 
 
@@ -20,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	    http
 	      .authorizeRequests()
 	      .antMatchers("/ShortURL/account").permitAll()
+	      .antMatchers("/ShortURL/help").permitAll()
 	      .anyRequest().authenticated()
 	      .and()
 	      .httpBasic()

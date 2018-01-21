@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<h2><strong>ShortURL help page</strong></h2>
+<p>Welcome, ShortUrl is REST web service,&nbsp;which acts as url redirect service.Service is packed as jar file and can be run as java -jar packageName.&nbsp;Currently when deployed service is listening on localhost:8080/ShortURL/</p>
+<p>&nbsp;</p>
+<p><strong>Account:</strong></p>
+<p>To use service, user first needs to create account by sending POST request containing username as String&nbsp;to&nbsp;/ShortURL/account.</p>
+<p>Example:&nbsp;&nbsp;{"username": "bib"&nbsp;}</p>
+<p>Service returns username and password.</p>
+<p>&nbsp;</p>
+<p><strong>Register URL:</strong></p>
+<p>User sets basic authentication, and provides username and password. To register new url user sends POST request containing url and redirect type to&nbsp;/ShortURL/register.&nbsp;Redirect type is optional, if not provided it is set to 302 by default</p>
+<p>Example:&nbsp;&nbsp;{&nbsp;"initialUrl": "http://www.ABC.com",&nbsp;"redirectType": 301&nbsp;}</p>
+<p>Service returns short url and redirect type</p>
+<p>&nbsp;</p>
+<p><strong>Statistics:</strong></p>
+<p>To get statistics, just go to ShortURL/statistics, and service will provide list of all url's, together with count,&nbsp;to see how many times this url is accessed&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Redirect:</strong></p>
+<p>User is redirected to intial url by accessing&nbsp;ShortURL/{short} where short is short url which service provided when registering new url.</p>

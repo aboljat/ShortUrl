@@ -15,6 +15,14 @@ import org.springframework.stereotype.Component;
 import com.dipnoi.ShortURL.model.RegisteredUrl;
 import com.dipnoi.ShortURL.service.securityServices.RedirectService;
 
+
+/**
+ * Class is used to expose end point for 
+ * url redirection
+ * 
+ * @author dipnoi
+ *
+ */
 @Component
 @Path("/")
 public class RedirectResource {
