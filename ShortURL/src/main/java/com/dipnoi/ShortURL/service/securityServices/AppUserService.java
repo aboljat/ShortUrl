@@ -10,6 +10,12 @@ import org.apache.commons.lang3.RandomStringUtils;
 import com.dipnoi.ShortURL.model.AppUser;
 import com.dipnoi.ShortURL.repository.AppUserRepository;
 
+/**
+ * Service used to store appUser
+ * 
+ * @author dipnoi
+ *
+ */
 @Service
 public class AppUserService implements UserDetailsService{
 
@@ -32,6 +38,14 @@ public class AppUserService implements UserDetailsService{
 
 	}
 	
+	
+	/**
+	 * Method takes app user, sets password using RandomStringUtils,
+	 * and calls appUserRepository to save user
+	 * 
+	 * @param appUser
+	 * @return
+	 */
 	public AppUser addUser(AppUser appUser){
 		
 		if(!appUseRep.existsByUsername(appUser.getUsername())){
